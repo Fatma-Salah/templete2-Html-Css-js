@@ -33,3 +33,7 @@ span.style.width = span.dataset.progress ;
 }
 });
 //  end skill progress
+function apper(){
+   console.log( document.getElementById('ul'));
+   document.getElementById('ul').style.display='block';
+}
