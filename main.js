@@ -37,3 +37,21 @@ function apper(){
    console.log( document.getElementById('ul'));
    document.getElementById('ul').style.display='block';
 }
+// up button
+let upSpan = document.querySelector('.show');
+window.onscroll = function(){
+if(window.scrollY >= 500 ){
+upSpan.classList.add('hidden');
+
+}else{
+    upSpan.classList.remove('hidden'); 
+}
+};
+upSpan.onclick=function(){
+    window.scrollTo(
+       {
+        top:0,
+        behavior:"smooth"
+       } 
+    )
+}
