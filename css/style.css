@@ -4,11 +4,6 @@ body{
     padding: 0;
     margin: 0;
 }
-main{
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
 html{
     scroll-behavior: smooth;
 }
@@ -208,6 +203,7 @@ nav ul li a.active,nav ul li a:hover{
    }
     nav ul{
         display: none;
+        flex-direction: column;
         list-style: none;
         position: absolute;
         width: calc(100% + 150px);
@@ -222,9 +218,12 @@ nav ul li a.active,nav ul li a:hover{
         font-size: xx-large;
     border-bottom: 3px solid  rgb(158 158 158 / 48%) !important;
     }
-
-.drop-down:hover +ul{
-    display: block;
+    nav ul li a:hover{
+        padding: 20px;
+    }
+  
+.drop-down:hover + ul{
+    display:block;
 }
 .drop-down:hover::before{
     position: absolute;
@@ -833,11 +832,16 @@ background-color: #dedadc;
 height: 20px;
     }
     .our-skills .prog-holder .prog span{
-        background-color: var(--main-color);
+    background-color: var(--main-color);
     height: 100%;
     display: block;
     position: relative;
-    }
+    transition: 1s ;
+    -webkit-transition: 1s ;
+    -moz-transition: 1s ;
+    -ms-transition: 1s ;
+    -o-transition: 1s ;
+}
     
     .our-skills .prog-holder .prog span::before{
         content: attr(data-progress);
@@ -1146,7 +1150,7 @@ margin-top: 44px;
     background: url('../images/footer1.jpg') no-repeat;
     background-size: cover;
     position: relative;
-    margin-top: 30px ;
+    margin: 30px 0px;
     z-index: 90;
     text-align: center;
 }
@@ -1170,22 +1174,18 @@ margin-top: 44px;
 .footer-content .content img{
     height: 70px;
     text-align: center;
-    margin-top: 50px;
-    display: inline-block;
 }
 .footer-content .content h1{
     text-transform: uppercase;
     font-weight: normal;
     font-size: xx-large;
-    width: 260px;
-    padding: 2px;
+    padding: 5px;
     border-bottom: 2px solid white;
-    margin: 7px auto;
 
 }
 .content .footer-icons i{
-    font-size: x-large;
-    margin: 0px 20px;
+    font-size: xx-large;
+    margin: 0px 30px;
 }
 footer{
     position: absolute;
@@ -1196,5 +1196,7 @@ footer{
 footer span{
     color: var(--main-color);
 }
-
+@media(max-width:767px){
+  
+}
 /* end footer  */
